@@ -18,7 +18,7 @@ jobs:
         run: chmod +x gradlew
         # Запускаем контейнер, как описано в docker-compose.yml
       - name: Container start
-        run: docker-compose up &
+        uses: hoverkraft-tech/compose-action@v2.0.1
         # ждем, когда контейнер будет создан, чтобы только потом запустить jar
       - name: Waiting for сontainer start
         run: sleep 30
